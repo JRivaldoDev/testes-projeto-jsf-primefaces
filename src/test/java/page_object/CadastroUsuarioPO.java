@@ -73,26 +73,28 @@ public class CadastroUsuarioPO extends BasePO{
 	@FindBy(css = "#formCadastro\\:deletar")
 	private WebElement btnDeletar;
 	
-	//botões da lista na posição 0
-	@FindBy(css = "#formListaUsuarios\\:j_idt102\\:0\\:editarUsuario > img")
-	private WebElement btnEditarUsuario0;
+	//botões e colunas da lista de usuarios na posição 1 (sendo o segundo da lista)
+	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario > tbody > tr.even > td:nth-child(1)")
+	private WebElement colUserId1;
 	
-	@FindBy(css = "#formListaUsuarios\\:j_idt102\\:0\\:deletarUsuario > img")
-	private WebElement btnDeletarUsuario0;
+	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario > tbody > tr.even > td:nth-child(2)")
+	private WebElement colUserNome1;
 	
-	//botões da lista na posição 1
-	@FindBy(css = "#formListaUsuarios\\:j_idt102\\:1\\:editarUsuario > img")
+	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario\\:1\\:editarUsuario > img")
 	private WebElement btnEditarUsuario1;
 	
-	@FindBy(css = "#formListaUsuarios\\:j_idt102\\:1\\:deletarUsuario > img")
+	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario\\:1\\:deletarUsuario > img")
 	private WebElement btnDeletarUsuario1;
 	
 	//mensagem
-	@FindBy(css = "#msgGrowl_container > div > div > div.ui-growl-message > span")
+	@FindBy(css = "#msgGrowl_container > div > div > div.ui-growl-message > p")
 	private WebElement growlMsg;
 	
 	@FindBy(css = "#j_idt7\\:menuLogout > span.ui-menuitem-text")
 	private WebElement menuLogout;
+	
+	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario_info")
+	private WebElement dataTableInfo;
 			
 	public CadastroUsuarioPO(WebDriver driver) {
 		super(driver);
@@ -234,18 +236,6 @@ public class CadastroUsuarioPO extends BasePO{
 	public void setBtnDeletar(WebElement btnDeletar) {
 		this.btnDeletar = btnDeletar;
 	}
-	public WebElement getBtnEditarUsuario0() {
-		return btnEditarUsuario0;
-	}
-	public void setBtnEditarUsuario0(WebElement btnEditarUsuario0) {
-		this.btnEditarUsuario0 = btnEditarUsuario0;
-	}
-	public WebElement getBtnDeletarUsuario0() {
-		return btnDeletarUsuario0;
-	}
-	public void setBtnDeletarUsuario0(WebElement btnDeletarUsuario0) {
-		this.btnDeletarUsuario0 = btnDeletarUsuario0;
-	}
 	public WebElement getBtnEditarUsuario1() {
 		return btnEditarUsuario1;
 	}
@@ -267,7 +257,15 @@ public class CadastroUsuarioPO extends BasePO{
 	public WebElement getMenuLogout() {
 		return menuLogout;
 	}
-	
+	public WebElement getColUserId1() {
+		return colUserId1;
+	}
+	public WebElement getColUserNome1() {
+		return colUserNome1;
+	}
+	public WebElement getDataTableInfo() {
+		return dataTableInfo;
+	}
 	
 	public void setarTodosOsInputsPadrao() {
 	
@@ -305,6 +303,4 @@ public class CadastroUsuarioPO extends BasePO{
 	public void deslogar() {
 		menuLogout.click();
 	}
-	
-	
 }
