@@ -73,17 +73,17 @@ public class CadastroUsuarioPO extends BasePO{
 	@FindBy(css = "#formCadastro\\:deletar")
 	private WebElement btnDeletar;
 	
-	//botões e colunas da lista de usuarios na posição 1 (sendo o segundo da lista)
-	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario > tbody > tr.even > td:nth-child(1)")
+	//botões e colunas da lista de usuarios na posição 1
+	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario > tbody > tr.odd > td:nth-child(1)")
 	private WebElement colUserId1;
 	
-	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario > tbody > tr.even > td:nth-child(2)")
+	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario > tbody > tr.odd > td:nth-child(2)")
 	private WebElement colUserNome1;
 	
-	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario\\:1\\:editarUsuario > img")
+	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario\\:0\\:editarUsuario > img")
 	private WebElement btnEditarUsuario1;
 	
-	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario\\:1\\:deletarUsuario > img")
+	@FindBy(css = "#formListaUsuarios\\:dataTableUsuario\\:0\\:deletarUsuario > img")
 	private WebElement btnDeletarUsuario1;
 	
 	//mensagem

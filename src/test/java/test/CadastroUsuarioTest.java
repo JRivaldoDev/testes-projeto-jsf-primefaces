@@ -216,7 +216,7 @@ public class CadastroUsuarioTest extends BaseTest {
 		
 		usuarioPO.setInputCep("1111111111");
 		usuarioPO.getInputCep().sendKeys(Keys.TAB);
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		String uf = usuarioPO.getInputUf().getAttribute("value");
 		String cidade = usuarioPO.getInputCidade().getAttribute("value");
 		
@@ -233,7 +233,7 @@ public class CadastroUsuarioTest extends BaseTest {
 		
 		usuarioPO.setInputCep("58295000");
 		usuarioPO.getInputCep().sendKeys(Keys.TAB);
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		String uf = usuarioPO.getInputUf().getAttribute("value");
 		String cidade = usuarioPO.getInputCidade().getAttribute("value");
  		
@@ -263,7 +263,7 @@ public class CadastroUsuarioTest extends BaseTest {
 			loginPO.logarComoAdmin();
 		}
 		usuarioPO.setarTodosOsInputsPadrao();
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		usuarioPO.salvarCadastro();
 
 		String resultado = usuarioPO.mostrarMensagem();
@@ -316,7 +316,7 @@ public class CadastroUsuarioTest extends BaseTest {
 		usuarioPO.getBtnEditarUsuario1().click();
 		usuarioPO.limparTodosOsInputs();
 		
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		
 		String id = usuarioPO.getInputIdUser().getAttribute("value");
 		String nome = usuarioPO.getInputNome().getAttribute("value");
@@ -337,7 +337,7 @@ public class CadastroUsuarioTest extends BaseTest {
 		usuarioPO.getBtnEditarUsuario1().click();
 		usuarioPO.getBtnNovoCadastro().click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(500);
 		
 		String id = usuarioPO.getInputIdUser().getAttribute("value");
 		String nome = usuarioPO.getInputNome().getAttribute("value");
@@ -357,7 +357,7 @@ public class CadastroUsuarioTest extends BaseTest {
 		usuarioPO.getBtnDeletarUsuario1().click();
 		String resultado = usuarioPO.mostrarMensagem();
 
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		
 		String dataTableInfo2 = usuarioPO.getDataTableInfo().getText();
 		
