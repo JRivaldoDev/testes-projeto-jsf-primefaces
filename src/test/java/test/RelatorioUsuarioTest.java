@@ -31,7 +31,6 @@ public class RelatorioUsuarioTest extends BaseTest{
 		
 		Thread.sleep(500);
 		String resultado = loginPO.retornarTituloDaPagina();
-		relatorioUsuarioPO.deslogar();
 		assertTrue(resultado, resultado.contains("Relatório de Usuários"));
 		
 	}
@@ -198,7 +197,7 @@ public class RelatorioUsuarioTest extends BaseTest{
 	}
 	
 	@Test
-	public void TC11_deveListarUsuariosCadastradosAoPesquisarPorCamposValidos() throws InterruptedException {
+	public void TC12_deveListarUsuariosCadastradosAoPesquisarPorCamposValidos() throws InterruptedException {
 		if(loginPO.retornarTituloDaPagina().equalsIgnoreCase("Login")) {
 			loginPO.logarComoAdmin();
 		}
